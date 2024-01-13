@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1106</width>
-    <height>953</height>
+    <height>955</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>20</x>
       <y>240</y>
       <width>291</width>
-      <height>521</height>
+      <height>511</height>
      </rect>
     </property>
     <property name="title">
@@ -49,7 +49,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>巍峨银凇(普通一)(100)</string>
+      <string>巍峨银凇(普通一)(50)</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_sp1">
@@ -62,7 +62,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>深寒造像(异格一)(200)</string>
+      <string>深寒造像(异格一)(150)</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_2">
@@ -75,7 +75,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>萨米之熵(普通二)(150)</string>
+      <string>萨米之熵(普通二)(100)</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_sp2">
@@ -88,7 +88,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>虚无之偶(异格二)(200)</string>
+      <string>虚无之偶(异格二)(120)</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_3">
@@ -101,7 +101,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>园丁(普通三)(100)</string>
+      <string>园丁(普通三)(80)</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_sp3">
@@ -140,7 +140,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>迈入永恒(异格四)(200)</string>
+      <string>迈入永恒(异格四)(250)</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_resScore">
@@ -156,7 +156,7 @@
       <string>0</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_double">
+    <widget class="QCheckBox" name="checkBox_more">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -166,7 +166,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>双结局额外加分(200)</string>
+      <string>多隐藏结局(100)</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_triple">
@@ -179,10 +179,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>三结局额外加分(100)</string>
+      <string>击败阿沙放生可汗(99)</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_threeFour">
+    <widget class="QCheckBox" name="checkBox_notree">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -192,7 +192,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>三、四连打额外加分(100)</string>
+      <string>不进树洞完成结局(200)</string>
      </property>
     </widget>
    </widget>
@@ -417,8 +417,93 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBox_animal">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>770</y>
+      <width>291</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>鸭狗熊、怪物箱得分：</string>
+    </property>
+    <widget class="QLabel" name="label_animalScore">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>-10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_animal">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="sliderPosition">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_animalNum">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_animalWord">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>数量：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_animal">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>81</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
    <zorder>groupBox_tmp</zorder>
    <zorder>groupBox_result</zorder>
+   <zorder>groupBox_animal</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -10,9 +10,10 @@ MainWindow::MainWindow(QWidget *parent)
     //initial variables
     tmpAllScore = tmp4 = tmp5 = tmp6 = 0;
     resScore = 0;
+    animalNum = animalScore = 0;
 
     //basic settings
-    resize(1600, 1000);
+    setFixedSize(1600, 950);
     setWindowTitle("第二届可汗杯分数计算器");
 }
 
@@ -37,6 +38,10 @@ void MainWindow::update()
 
     //Result part update
     ui->label_resScore->setNum(resScore);
+
+    //Animal part update
+    ui->label_animalScore->setNum(animalScore);
+    ui->label_animalNum->setNum(animalNum);
 }
 
 void MainWindow::on_pushButton_tmp6Sub_clicked()
@@ -77,7 +82,93 @@ void MainWindow::on_pushButton_tmp4Add_clicked()
 
 void MainWindow::on_checkBox_1_stateChanged(int arg1)
 {
+    if (arg1) resScore += 50;
+    else resScore -= 50;
+    update();
+}
+
+void MainWindow::on_checkBox_sp1_stateChanged(int arg1)
+{
+    if (arg1) resScore += 150;
+    else resScore -= 150;
+    update();
+}
+
+void MainWindow::on_checkBox_2_stateChanged(int arg1)
+{
     if (arg1) resScore += 100;
     else resScore -= 100;
+    update();
+}
+
+void MainWindow::on_checkBox_sp2_stateChanged(int arg1)
+{
+    if (arg1) resScore += 120;
+    else resScore -= 120;
+    update();
+}
+
+void MainWindow::on_checkBox_3_stateChanged(int arg1)
+{
+    if (arg1) resScore += 80;
+    else resScore -= 80;
+    update();
+}
+
+void MainWindow::on_checkBox_sp3_stateChanged(int arg1)
+{
+    if (arg1) resScore += 300;
+    else resScore -= 300;
+    update();
+}
+
+void MainWindow::on_checkBox_4_stateChanged(int arg1)
+{
+    if (arg1) resScore += 150;
+    else resScore -= 150;
+    update();
+}
+
+void MainWindow::on_checkBox_sp4_stateChanged(int arg1)
+{
+    if (arg1) resScore += 250;
+    else resScore -= 250;
+    update();
+}
+
+void MainWindow::on_checkBox_more_stateChanged(int arg1)
+{
+    if (arg1) resScore += 100;
+    else resScore -= 100;
+    update();
+}
+
+void MainWindow::on_checkBox_triple_stateChanged(int arg1)
+{
+    if (arg1) resScore += 99;
+    else resScore -= 99;
+    update();
+}
+
+void MainWindow::on_checkBox_notree_stateChanged(int arg1)
+{
+    if (arg1) resScore += 200;
+    else resScore -= 200;
+    update();
+}
+
+void MainWindow::on_horizontalSlider_animal_valueChanged(int value)
+{
+    animalNum = value;
+    animalScore = value * 20;
+    ui->spinBox_animal->setValue(value);
+    update();
+}
+
+void MainWindow::on_spinBox_animal_valueChanged(int arg1)
+{
+    ui->horizontalSlider_animal->setValue(arg1);
+    animalNum = arg1;
+    animalScore = arg1 * 20;
     update();
 }
