@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1106</width>
+    <width>1260</width>
     <height>955</height>
    </rect>
   </property>
@@ -36,7 +36,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>风雪蔽目(未完成)</string>
+      <string>风雪蔽目</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_1">
@@ -49,7 +49,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>巍峨银凇(普通一)(50)</string>
+      <string>巍峨银凇</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_sp1">
@@ -62,7 +62,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>深寒造像(异格一)(150)</string>
+      <string>深寒造像</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_2">
@@ -75,7 +75,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>萨米之熵(普通二)(100)</string>
+      <string>萨米之熵</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_sp2">
@@ -88,7 +88,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>虚无之偶(异格二)(120)</string>
+      <string>虚无之偶</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_3">
@@ -101,7 +101,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>园丁(普通三)(80)</string>
+      <string>园丁</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_sp3">
@@ -114,7 +114,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>哨兵(异格三)(300)</string>
+      <string>哨兵</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_4">
@@ -127,7 +127,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>时光之沙(普通四)(150)</string>
+      <string>时光之沙</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_sp4">
@@ -140,7 +140,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>迈入永恒(异格四)(250)</string>
+      <string>迈入永恒</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_resScore">
@@ -166,10 +166,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>多隐藏结局(100)</string>
+      <string>多隐藏结局</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_triple">
+    <widget class="QCheckBox" name="checkBox_special">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -179,7 +179,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>击败阿沙放生可汗(99)</string>
+      <string>击败阿沙放生可汗</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox_notree">
@@ -192,7 +192,236 @@
       </rect>
      </property>
      <property name="text">
-      <string>不进树洞完成结局(200)</string>
+      <string>不进树洞完成结局</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_1poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>70</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_1good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp1poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>110</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp1good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>110</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_2poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>150</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_2good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>150</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp2poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>190</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp2good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>190</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_3poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>230</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_3good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>230</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp3poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>270</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp3good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>270</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_4poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>310</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_4good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>310</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp4poor">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>350</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sp4good">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>350</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
      </property>
     </widget>
    </widget>
@@ -442,28 +671,6 @@
       <string>0</string>
      </property>
     </widget>
-    <widget class="QSlider" name="horizontalSlider_animal">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>211</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="maximum">
-      <number>10</number>
-     </property>
-     <property name="value">
-      <number>0</number>
-     </property>
-     <property name="sliderPosition">
-      <number>0</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_animalNum">
      <property name="geometry">
       <rect>
@@ -499,18 +706,293 @@
        <height>41</height>
       </rect>
      </property>
+     <property name="maximum">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_animal">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_urgency">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>30</y>
+      <width>361</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>紧急关卡得分：</string>
+    </property>
+    <widget class="QLabel" name="label_urgencyScore">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>-10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_prop">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>30</y>
+      <width>381</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>藏品、宣言板、战术道具得分：</string>
+    </property>
+    <widget class="QLabel" name="label_propScore">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>-10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_clction">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>81</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_clctionNum">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_clctionWord">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>藏品数量：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_boardWord">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>宣言板数量：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_board">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>181</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_boardNum">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>130</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_clctionWords">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>藏品(10)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_boardWords">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>宣言板(10)</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_clction">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_board">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>130</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_store">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>280</y>
+      <width>381</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>商店得分：</string>
+    </property>
+    <widget class="QLabel" name="label_storeScore">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>-9</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_extraWithdraw">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>多取钱次数：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_extraWithdraw">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_noWithdraw">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>全程未取钱</string>
+     </property>
     </widget>
    </widget>
    <zorder>groupBox_tmp</zorder>
    <zorder>groupBox_result</zorder>
    <zorder>groupBox_animal</zorder>
+   <zorder>groupBox_urgency</zorder>
+   <zorder>groupBox_prop</zorder>
+   <zorder>groupBox_store</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1106</width>
+     <width>1260</width>
      <height>21</height>
     </rect>
    </property>
@@ -518,5 +1000,454 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>checkBox_1</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_1poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_1good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp1</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp1good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp1poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_2</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_2good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_2poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_3</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_3good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_3poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_4</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_4good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_4poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp2</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>471</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp2good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>471</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp2poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>471</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp3</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>551</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp3good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>551</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp3poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>551</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp4</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>631</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp4good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>631</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sp4poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>631</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_more</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>671</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_notree</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>751</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_special</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>711</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_noWithdraw</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>905</x>
+     <y>441</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

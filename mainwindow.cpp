@@ -7,12 +7,19 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //initial variables
+    //Initial variables
     tmpAllScore = tmp4 = tmp5 = tmp6 = 0;
+
+    for (int i = 0; i < 8; ++i) res[i] = 0;
     resScore = 0;
+
     animalNum = animalScore = 0;
 
-    //basic settings
+    clctionNum = boardNum = propScore = 0;
+
+    storeScore = extraWithdraw = 0;
+
+    //Basic settings
     setFixedSize(1600, 950);
     setWindowTitle("第二届可汗杯分数计算器");
 }
@@ -37,11 +44,52 @@ void MainWindow::update()
     ui->label_tmpAllScore->setNum(tmpAllScore);
 
     //Result part update
+    res[0] = (50 * ui->checkBox_1->isChecked() + 60 * ui->checkBox_1poor->isChecked());
+    if (ui->checkBox_1good->isChecked()) res[0] += res[0] / 5;
+
+    res[1] = (150 * ui->checkBox_sp1->isChecked() + 60 * ui->checkBox_sp1poor->isChecked());
+    if (ui->checkBox_sp1good->isChecked()) res[1] += res[1] / 5;
+
+    res[2] = (100 * ui->checkBox_2->isChecked() + 60 * ui->checkBox_2poor->isChecked());
+    if (ui->checkBox_2good->isChecked()) res[2] += res[2] / 5;
+
+    res[3] = (120 * ui->checkBox_sp2->isChecked() + 60 * ui->checkBox_sp2poor->isChecked());
+    if (ui->checkBox_sp2good->isChecked()) res[3] += res[3] / 5;
+
+    res[4] = (80 * ui->checkBox_3->isChecked() + 80 * ui->checkBox_3poor->isChecked());
+    if (ui->checkBox_3good->isChecked()) res[4] += res[4] / 5;
+
+    res[5] = (300 * ui->checkBox_sp3->isChecked() + 80 * ui->checkBox_sp3poor->isChecked());
+    if (ui->checkBox_sp3good->isChecked()) res[5] += res[5] / 5;
+
+    res[6] = (150 * ui->checkBox_4->isChecked() + 80 * ui->checkBox_4poor->isChecked());
+    if (ui->checkBox_4good->isChecked()) res[6] += res[6] / 5;
+
+    res[7] = (250 * ui->checkBox_sp4->isChecked() + 80 * ui->checkBox_sp4poor->isChecked());
+    if (ui->checkBox_sp4good->isChecked()) res[7] += res[7] / 5;
+
+    resScore = 0;
+    for (int i = 0; i < 8; ++i) resScore += res[i];
+    if (ui->checkBox_more->isChecked()) resScore += 100;
+    if (ui->checkBox_notree->isChecked()) resScore += 200;
+    if (ui->checkBox_special->isChecked()) resScore += 99;
     ui->label_resScore->setNum(resScore);
 
     //Animal part update
     ui->label_animalScore->setNum(animalScore);
     ui->label_animalNum->setNum(animalNum);
+
+    //Urgency part update
+
+    //Prop part update
+    ui->label_boardNum->setNum(boardNum);
+    ui->label_clctionNum->setNum(clctionNum);
+    propScore = boardNum * 10 + clctionNum * 10;
+    ui->label_propScore->setNum(propScore);
+
+    //Store part update
+    storeScore = ui->checkBox_noWithdraw->isChecked() * 66 - extraWithdraw * 10;
+    ui->label_storeScore->setNum(storeScore);
 }
 
 void MainWindow::on_pushButton_tmp6Sub_clicked()
@@ -80,83 +128,6 @@ void MainWindow::on_pushButton_tmp4Add_clicked()
     update();
 }
 
-void MainWindow::on_checkBox_1_stateChanged(int arg1)
-{
-    if (arg1) resScore += 50;
-    else resScore -= 50;
-    update();
-}
-
-void MainWindow::on_checkBox_sp1_stateChanged(int arg1)
-{
-    if (arg1) resScore += 150;
-    else resScore -= 150;
-    update();
-}
-
-void MainWindow::on_checkBox_2_stateChanged(int arg1)
-{
-    if (arg1) resScore += 100;
-    else resScore -= 100;
-    update();
-}
-
-void MainWindow::on_checkBox_sp2_stateChanged(int arg1)
-{
-    if (arg1) resScore += 120;
-    else resScore -= 120;
-    update();
-}
-
-void MainWindow::on_checkBox_3_stateChanged(int arg1)
-{
-    if (arg1) resScore += 80;
-    else resScore -= 80;
-    update();
-}
-
-void MainWindow::on_checkBox_sp3_stateChanged(int arg1)
-{
-    if (arg1) resScore += 300;
-    else resScore -= 300;
-    update();
-}
-
-void MainWindow::on_checkBox_4_stateChanged(int arg1)
-{
-    if (arg1) resScore += 150;
-    else resScore -= 150;
-    update();
-}
-
-void MainWindow::on_checkBox_sp4_stateChanged(int arg1)
-{
-    if (arg1) resScore += 250;
-    else resScore -= 250;
-    update();
-}
-
-void MainWindow::on_checkBox_more_stateChanged(int arg1)
-{
-    if (arg1) resScore += 100;
-    else resScore -= 100;
-    update();
-}
-
-void MainWindow::on_checkBox_triple_stateChanged(int arg1)
-{
-    if (arg1) resScore += 99;
-    else resScore -= 99;
-    update();
-}
-
-void MainWindow::on_checkBox_notree_stateChanged(int arg1)
-{
-    if (arg1) resScore += 200;
-    else resScore -= 200;
-    update();
-}
-
 void MainWindow::on_horizontalSlider_animal_valueChanged(int value)
 {
     animalNum = value;
@@ -170,5 +141,39 @@ void MainWindow::on_spinBox_animal_valueChanged(int arg1)
     ui->horizontalSlider_animal->setValue(arg1);
     animalNum = arg1;
     animalScore = arg1 * 20;
+    update();
+}
+
+void MainWindow::on_horizontalSlider_clction_valueChanged(int value)
+{
+    clctionNum = value;
+    ui->spinBox_clction->setValue(value);
+    update();
+}
+
+void MainWindow::on_spinBox_clction_valueChanged(int arg1)
+{
+    ui->horizontalSlider_clction->setValue(arg1);
+    clctionNum = arg1;
+    update();
+}
+
+void MainWindow::on_horizontalSlider_board_valueChanged(int value)
+{
+    boardNum = value;
+    ui->spinBox_board->setValue(value);
+    update();
+}
+
+void MainWindow::on_spinBox_board_valueChanged(int arg1)
+{
+    ui->horizontalSlider_board->setValue(arg1);
+    boardNum = arg1;
+    update();
+}
+
+void MainWindow::on_spinBox_extraWithdraw_valueChanged(int arg1)
+{
+    extraWithdraw = arg1;
     update();
 }
