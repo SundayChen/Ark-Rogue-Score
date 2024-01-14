@@ -8,30 +8,27 @@ UrgenUi::UrgenUi(QWidget *parent) :
     ui->setupUi(this);
 
     //Initiate
-    ScoreMap.insert("冰海疑影", 30);
-    ScoreMap.insert("狡兽九窟", 30);
-    ScoreMap.insert("坍缩体的午后", 40);
-    ScoreMap.insert("公司纠葛", 40);
-    ScoreMap.insert("生人勿近", 50);
-    ScoreMap.insert("混乱的表象", 50);
-    ScoreMap.insert("求敌得敌", 50);
-    ScoreMap.insert("本能污染", 80);
-    ScoreMap.insert("亡者行军", 80);
-    ScoreMap.insert("乐理之灾", 80);
-    ScoreMap.insert("何处无山海", 80);
-    ScoreMap.insert("人造物狂欢节", 100);
-    ScoreMap.insert("霜与沙", 80);
-    ScoreMap.insert("生灵的终点", 150);
-
-    foreach(const QString &str, ScoreMap.keys()) {
-        ui->comboBox->addItem(str, ScoreMap.value(str));
-    }
+    ui->comboBox->addItem("冰海疑影", 30);
+    ui->comboBox->addItem("狡兽九窟", 30);
+    ui->comboBox->addItem("坍缩体的午后", 40);
+    ui->comboBox->addItem("公司纠葛", 40);
+    ui->comboBox->addItem("生人勿近", 50);
+    ui->comboBox->addItem("混乱的表象", 50);
+    ui->comboBox->addItem("求敌得敌", 50);
+    ui->comboBox->addItem("本能污染", 80);
+    ui->comboBox->addItem("亡者行军", 80);
+    ui->comboBox->addItem("乐理之灾", 80);
+    ui->comboBox->addItem("何处无山海", 80);
+    ui->comboBox->addItem("人造物狂欢节", 100);
+    ui->comboBox->addItem("霜与沙", 80);
+    ui->comboBox->addItem("生灵的终点", 150);
 
     score = 0;
 
     //Basic settings
     setFixedSize(480, 300);
     setWindowTitle("紧急关卡");
+    setWindowIcon(QPixmap(":/media/icon.jpg"));
 
     update();
 }
@@ -46,12 +43,12 @@ void UrgenUi::update()
     score = ui->comboBox->currentData().toInt() + ui->checkBox_extra->isChecked() * 20 + ui->spinBox->value();
     if (ui->checkBox_press->isChecked()) {
         if (ui->comboBox->currentData().toInt() == 40) score += 20;
-        else if (ui->comboBox->currentData().toInt() == 50) score += 30;
-        else if (ui->comboBox->currentData().toInt() == 100) score += 30;
+        else if (ui->comboBox->currentData().toInt() == 50) score += 20;
+        else if (ui->comboBox->currentData().toInt() == 100) score += 20;
         else if (ui->comboBox->currentData().toInt() == 150) score += 40;
         else if (ui->comboBox->currentData().toInt() == 80) {
             if (ui->comboBox->currentText() == "霜与沙") score += 40;
-            else score += 30;
+            else score += 20;
         }
     }
     if (ui->checkBox_good->isChecked()) score += score / 5;

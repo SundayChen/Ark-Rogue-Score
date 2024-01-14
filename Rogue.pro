@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,17 +19,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    splevelui.cpp \
     urgenui.cpp
 
 HEADERS += \
     mainwindow.h \
+    splevelui.h \
     urgenui.h
 
 FORMS += \
     mainwindow.ui \
+    splevelui.ui \
     urgenui.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc

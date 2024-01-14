@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1260</width>
-    <height>955</height>
+    <width>1660</width>
+    <height>1009</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -424,6 +424,19 @@
       <string>无漏</string>
      </property>
     </widget>
+    <widget class="QCheckBox" name="checkBox_retry">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>非一层重开</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_tmp">
     <property name="geometry">
@@ -733,7 +746,7 @@
       <x>360</x>
       <y>30</y>
       <width>361</width>
-      <height>581</height>
+      <height>491</height>
      </rect>
     </property>
     <property name="title">
@@ -758,7 +771,7 @@
        <x>20</x>
        <y>100</y>
        <width>81</width>
-       <height>461</height>
+       <height>371</height>
       </rect>
      </property>
     </widget>
@@ -794,7 +807,7 @@
        <x>100</x>
        <y>100</y>
        <width>161</width>
-       <height>461</height>
+       <height>371</height>
       </rect>
      </property>
     </widget>
@@ -804,235 +817,8 @@
        <x>260</x>
        <y>100</y>
        <width>81</width>
-       <height>461</height>
+       <height>371</height>
       </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_prop">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>30</y>
-      <width>381</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>藏品、宣言板、战术道具得分：</string>
-    </property>
-    <widget class="QLabel" name="label_propScore">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>-10</y>
-       <width>41</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </widget>
-    <widget class="QSpinBox" name="spinBox_clction">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>81</y>
-       <width>91</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="maximum">
-      <number>200</number>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_clctionNum">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>30</y>
-       <width>101</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_clctionWord">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>90</y>
-       <width>131</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>藏品数量：</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_boardWord">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>190</y>
-       <width>131</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>宣言板数量：</string>
-     </property>
-    </widget>
-    <widget class="QSpinBox" name="spinBox_board">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>181</y>
-       <width>91</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="maximum">
-      <number>100</number>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_boardNum">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>130</y>
-       <width>101</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_clctionWords">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>131</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>藏品(10)</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_boardWords">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>140</y>
-       <width>131</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>宣言板(10)</string>
-     </property>
-    </widget>
-    <widget class="QSlider" name="horizontalSlider_clction">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>30</y>
-       <width>201</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="maximum">
-      <number>100</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QSlider" name="horizontalSlider_board">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>130</y>
-       <width>201</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="maximum">
-      <number>50</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_store">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>280</y>
-      <width>381</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>商店得分：</string>
-    </property>
-    <widget class="QLabel" name="label_storeScore">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>-9</y>
-       <width>41</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_extraWithdraw">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>121</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>多取钱次数：</string>
-     </property>
-    </widget>
-    <widget class="QSpinBox" name="spinBox_extraWithdraw">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>30</y>
-       <width>91</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="maximum">
-      <number>100</number>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox_noWithdraw">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>70</y>
-       <width>231</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>全程未取钱</string>
      </property>
     </widget>
    </widget>
@@ -1040,8 +826,8 @@
     <property name="geometry">
      <rect>
       <x>770</x>
-      <y>420</y>
-      <width>381</width>
+      <y>540</y>
+      <width>361</width>
       <height>241</height>
      </rect>
     </property>
@@ -1168,7 +954,7 @@
     <widget class="QLabel" name="label_3bossScore">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>280</x>
        <y>31</y>
        <width>54</width>
        <height>41</height>
@@ -1181,7 +967,7 @@
     <widget class="QLabel" name="label_4levelScore">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>280</x>
        <y>80</y>
        <width>54</width>
        <height>41</height>
@@ -1194,7 +980,7 @@
     <widget class="QLabel" name="label_5levelScore">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>280</x>
        <y>130</y>
        <width>54</width>
        <height>41</height>
@@ -1207,7 +993,7 @@
     <widget class="QLabel" name="label_6levelScore">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>280</x>
        <y>180</y>
        <width>54</width>
        <height>41</height>
@@ -1218,20 +1004,481 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBox_prop">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>680</y>
+      <width>361</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>藏品、宣言板、战术道具得分：</string>
+    </property>
+    <widget class="QLabel" name="label_propScore">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>-10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_clction">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>81</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_clctionNum">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_clctionWord">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>藏品数量：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_boardWord">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>宣言板数量：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_board">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>181</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_boardNum">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>130</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_clctionWords">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>藏品(10)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_boardWords">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>宣言板(10)</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_clction">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_board">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>130</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>50</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_store">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>540</y>
+      <width>361</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>商店得分：</string>
+    </property>
+    <widget class="QLabel" name="label_storeScore">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>-9</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_extraWithdraw">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>多取钱次数：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_extraWithdraw">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_noWithdraw">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>全程未取钱</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_spLevel">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>30</y>
+      <width>361</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>特殊关卡得分：</string>
+    </property>
+    <widget class="QLabel" name="label_spLevelScore">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>-10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_spLvNum">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>81</width>
+       <height>331</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_spLvAdd">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>80</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>添加</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_spLvDel">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>80</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>删除</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_spLvName">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>140</y>
+       <width>161</width>
+       <height>331</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_spLvScore">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>140</y>
+       <width>81</width>
+       <height>331</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_spLvsp3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>呼吸/大地醒转/夺树者</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_spLvsp3_poor">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>30</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>抗压</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_splvsp3_good">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>30</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无漏</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_final">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>810</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结算分：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_finalCorrect">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>870</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>修正分：</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_final">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>800</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>4000</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_finalCorrect">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>860</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>4000</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_total">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>840</y>
+      <width>121</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>总分：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_totalScore">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>840</y>
+      <width>141</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0！</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1390</x>
+      <y>850</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>归零</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_about">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>10</y>
+      <width>491</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>groupBox_tmp</zorder>
    <zorder>groupBox_result</zorder>
    <zorder>groupBox_animal</zorder>
    <zorder>groupBox_urgency</zorder>
+   <zorder>groupBox_pressure</zorder>
    <zorder>groupBox_prop</zorder>
    <zorder>groupBox_store</zorder>
-   <zorder>groupBox_pressure</zorder>
+   <zorder>groupBox_spLevel</zorder>
+   <zorder>label_final</zorder>
+   <zorder>label_finalCorrect</zorder>
+   <zorder>spinBox_final</zorder>
+   <zorder>spinBox_finalCorrect</zorder>
+   <zorder>label_total</zorder>
+   <zorder>label_totalScore</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>label_about</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1260</width>
+     <width>1660</width>
      <height>21</height>
     </rect>
    </property>
@@ -1765,6 +2012,102 @@
     <hint type="destinationlabel">
      <x>629</x>
      <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retry</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_spLvsp3</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>895</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_spLvsp3_poor</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1105</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_splvsp3_good</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1175</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_final</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>920</x>
+     <y>846</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_finalCorrect</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>920</x>
+     <y>906</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>502</y>
     </hint>
    </hints>
   </connection>

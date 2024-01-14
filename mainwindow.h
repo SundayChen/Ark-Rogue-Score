@@ -4,7 +4,12 @@
 #include <QMainWindow>
 #include <QList>
 #include <QPair>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QPixmap>
+#include <QPainter>
 #include "urgenui.h"
+#include "splevelui.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,7 +24,8 @@ public:
     ~MainWindow();
 
 protected:
-    int tmpScore, resScore, animalScore, urgencyScore, propScore, storeScore, pressureScore;
+    int tmpScore, resScore, animalScore, urgencyScore, propScore, storeScore, pressureScore, spLvScore;
+    int total;
 
     int tmp6, tmp5, tmp4;
 
@@ -31,6 +37,14 @@ protected:
     int urgencyCount;
 
     int clctionNum, boardNum;
+
+    QList<QPair<QString, int>> *spLv;
+    int spLvCount, sp3Score;
+
+    QMediaPlayer *resetSound;
+    QMediaPlaylist *resetSoundList;
+
+    void paintEvent(QPaintEvent *) override;
 
 private slots:
     void update();
@@ -62,6 +76,12 @@ private slots:
     void on_pushButton_urgenDel_clicked();
 
     void on_pushButton_urgenAdd_clicked();
+
+    void on_pushButton_spLvAdd_clicked();
+
+    void on_pushButton_spLvDel_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

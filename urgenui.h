@@ -2,7 +2,6 @@
 #define URGENUI_H
 
 #include <QMainWindow>
-#include <QMap>
 
 namespace Ui {
 class UrgenUi;
@@ -17,7 +16,6 @@ public:
     ~UrgenUi();
 
 protected:
-    QMap<QString, int> ScoreMap;
     int score;
 
 private slots:

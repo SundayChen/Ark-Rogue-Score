@@ -8,7 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     //Initial variables
-    tmpScore = resScore = animalScore = urgencyScore = propScore = storeScore = pressureScore = 0;
+    tmpScore = resScore = animalScore = urgencyScore = propScore = storeScore = pressureScore = spLvScore = 0;
+    total = 0;
 
     tmp4 = tmp5 = tmp6 = 0;
 
@@ -18,11 +19,41 @@ MainWindow::MainWindow(QWidget *parent)
 
     urgency = new QList<QPair<QString, int>>();
 
+    spLv = new QList<QPair<QString, int>>();
+    sp3Score = 0;
+
     clctionNum = boardNum = 0;
 
+    //Reset sound
+    resetSound = new QMediaPlayer(this);
+    resetSoundList = new QMediaPlaylist(this);
+    resetSoundList->addMedia(QUrl("qrc:/media/reset.mp3"));
+    resetSound->setVolume(35);
+    resetSound->setPlaylist(resetSoundList);
+
     //Basic settings
-    setFixedSize(1600, 950);
+    setFixedSize(1550, 950);
     setWindowTitle("第二届可汗杯分数计算器");
+    setWindowIcon(QPixmap(":/media/icon.jpg"));
+
+    ui->label_total->setFont(QFont("黑体", 20));
+    ui->label_totalScore->setFont(QFont("Times New Roman", 20));
+    ui->pushButton->setFont(QFont("黑体", 12));
+
+    //Correction score explanation
+    ui->label_about->setText("抗压加分规则：\n\n"
+                             "藏品≤10，完成三层boss战的编队中，\n"
+                             "精二≤1，六星≤3，额外+30分\n\n"
+                             "藏品≤15，完成四层任何作战的编队中，\n"
+                             "精二≤2，六星≤4，额外+20分\n\n"
+                             "藏品≤15，完成五层非boss作战的编队中，\n"
+                             "精二≤4，六星≤6，额外+20分\n\n"
+                             "藏品≤15，完成五层boss作战的编队中，\n"
+                             "精二≤5，六星≤7，额外+60分\n\n"
+                             "藏品≤25，完成六层及以上非boss作战，\n"
+                             "精二≤6，六星≤8，额外+40分\n\n"
+                             "藏品≤25，完成六层及以上boss作战，\n"
+                             "精二≤7，六星≤9，额外+80分");
 
     update();
 }
@@ -31,6 +62,17 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete urgency;
+    delete spLv;
+    delete resetSound;
+    delete resetSoundList;
+}
+
+void MainWindow::paintEvent(QPaintEvent *)
+{
+    //Paint background
+    QPainter painter(this);
+    QPixmap pix(":/media/Sami.png");
+    painter.drawPixmap(1180, 470, 350, 350, pix);
 }
 
 void MainWindow::update()
@@ -74,12 +116,14 @@ void MainWindow::update()
 
     resScore = 0;
     for (int i = 0; i < 8; ++i) resScore += res[i];
+    if (ui->checkBox_retry->isChecked()) resScore -= 50;
     if (ui->checkBox_more->isChecked()) resScore += 100;
     if (ui->checkBox_notree->isChecked()) resScore += 200;
     if (ui->checkBox_special->isChecked()) resScore += 99;
     ui->label_resScore->setNum(resScore);
 
     //Animal part update
+    animalScore = animalNum * 20;
     ui->label_animalScore->setNum(animalScore);
     ui->label_animalNum->setNum(animalNum);
 
@@ -110,11 +154,34 @@ void MainWindow::update()
     //Pressure part update
     ui->label_3bossScore->setNum(ui->spinBox_3boss->value() * 30);
     ui->label_4levelScore->setNum(ui->spinBox_4level->value() * 20);
-    ui->label_5levelScore->setNum(ui->spinBox_5level->value() * 30);
+    ui->label_5levelScore->setNum(ui->spinBox_5level->value() * 20);
     ui->label_6levelScore->setNum(ui->spinBox_6level->value() * 40);
 
     pressureScore = ui->spinBox_3boss->value() * 30 + ui->spinBox_4level->value() * 20 + ui->spinBox_5level->value() * 30 + ui->spinBox_6level->value() * 40;
     ui->label_pressureScore->setNum(pressureScore);
+
+    //Splv part update
+    spLvScore = spLvCount = 0;
+    ui->textBrowser_spLvNum->setText("编号\n");
+    ui->textBrowser_spLvName->setText("关卡名称\n");
+    ui->textBrowser_spLvScore->setText("分数\n");
+    for (auto it = spLv->begin(); it != spLv->end(); ++it) {
+        ++spLvCount;
+        ui->textBrowser_spLvNum->append(QString::number(spLvCount));
+        ui->textBrowser_spLvName->append(it->first);
+        ui->textBrowser_spLvScore->append(QString::number(it->second));
+        spLvScore += it->second;
+    }
+    sp3Score = ui->checkBox_spLvsp3->isChecked() * 50 + ui->checkBox_spLvsp3_poor->isChecked() * 30;
+    if (ui->checkBox_splvsp3_good->isChecked()) sp3Score += sp3Score / 5;
+    spLvScore += sp3Score;
+    ui->label_spLevelScore->setNum(spLvScore);
+
+    //Total
+    total = tmpScore + resScore + animalScore + urgencyScore + propScore + storeScore + pressureScore + spLvScore;
+    total += ui->spinBox_final->value() + ui->spinBox_finalCorrect->value();
+
+    ui->label_totalScore->setText(QString::number(total) + "！");
 }
 
 void MainWindow::on_pushButton_tmp6Sub_clicked()
@@ -156,7 +223,6 @@ void MainWindow::on_pushButton_tmp4Add_clicked()
 void MainWindow::on_horizontalSlider_animal_valueChanged(int value)
 {
     animalNum = value;
-    animalScore = value * 20;
     ui->spinBox_animal->setValue(value);
     update();
 }
@@ -165,7 +231,6 @@ void MainWindow::on_spinBox_animal_valueChanged(int arg1)
 {
     ui->horizontalSlider_animal->setValue(arg1);
     animalNum = arg1;
-    animalScore = arg1 * 20;
     update();
 }
 
@@ -214,4 +279,86 @@ void MainWindow::on_pushButton_urgenAdd_clicked()
         update();
     });
     update();
+}
+
+void MainWindow::on_pushButton_spLvAdd_clicked()
+{
+    spLevelUi *spLv_ui = new spLevelUi();
+    spLv_ui->show();
+    connect(spLv_ui, &spLevelUi::spLvExit, this, [=](const QString &mainStr, int mainScore){
+        spLv->append(QPair<QString, int>(mainStr, mainScore));
+        spLv_ui->close();
+        update();
+    });
+    update();
+}
+
+void MainWindow::on_pushButton_spLvDel_clicked()
+{
+    if (spLv->isEmpty()) return;
+    spLv->removeLast();
+    update();
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    //Variables
+    tmp4 = tmp5 = tmp6 = 0;
+    urgency->clear();
+    spLv->clear();
+    update();
+
+    //Checkbox
+    ui->checkBox_0->setChecked(false);
+    ui->checkBox_1->setChecked(false);
+    ui->checkBox_2->setChecked(false);
+    ui->checkBox_3->setChecked(false);
+    ui->checkBox_4->setChecked(false);
+    ui->checkBox_sp1->setChecked(false);
+    ui->checkBox_sp2->setChecked(false);
+    ui->checkBox_sp3->setChecked(false);
+    ui->checkBox_sp4->setChecked(false);
+    ui->checkBox_more->setChecked(false);
+    ui->checkBox_1good->setChecked(false);
+    ui->checkBox_1poor->setChecked(false);
+    ui->checkBox_2good->setChecked(false);
+    ui->checkBox_2poor->setChecked(false);
+    ui->checkBox_3good->setChecked(false);
+    ui->checkBox_3poor->setChecked(false);
+    ui->checkBox_4good->setChecked(false);
+    ui->checkBox_4poor->setChecked(false);
+    ui->checkBox_retry->setChecked(false);
+    ui->checkBox_notree->setChecked(false);
+    ui->checkBox_sp1good->setChecked(false);
+    ui->checkBox_sp1poor->setChecked(false);
+    ui->checkBox_sp2good->setChecked(false);
+    ui->checkBox_sp2poor->setChecked(false);
+    ui->checkBox_sp3good->setChecked(false);
+    ui->checkBox_sp3poor->setChecked(false);
+    ui->checkBox_sp4good->setChecked(false);
+    ui->checkBox_sp4poor->setChecked(false);
+    ui->checkBox_spLvsp3->setChecked(false);
+    ui->checkBox_special->setChecked(false);
+    ui->checkBox_noWithdraw->setChecked(false);
+    ui->checkBox_spLvsp3_poor->setChecked(false);
+    ui->checkBox_splvsp3_good->setChecked(false);
+
+    //Slider
+    ui->horizontalSlider_board->setValue(0);
+    ui->horizontalSlider_animal->setValue(0);
+    ui->horizontalSlider_clction->setValue(0);
+
+    //Spinbox
+    ui->spinBox_3boss->setValue(0);
+    ui->spinBox_board->setValue(0);
+    ui->spinBox_final->setValue(0);
+    ui->spinBox_4level->setValue(0);
+    ui->spinBox_5level->setValue(0);
+    ui->spinBox_6level->setValue(0);
+    ui->spinBox_animal->setValue(0);
+    ui->spinBox_clction->setValue(0);
+    ui->spinBox_finalCorrect->setValue(0);
+    ui->spinBox_extraWithdraw->setValue(0);
+
+    resetSound->play();
 }

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>media/reset.mp3</file>
+        <file>media/icon.jpg</file>
+        <file>media/Sami.png</file>
+    </qresource>
+</RCC>
