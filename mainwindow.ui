@@ -733,7 +733,7 @@
       <x>360</x>
       <y>30</y>
       <width>361</width>
-      <height>571</height>
+      <height>581</height>
      </rect>
     </property>
     <property name="title">
@@ -750,6 +750,62 @@
      </property>
      <property name="text">
       <string>0</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_urgenNum">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>81</width>
+       <height>461</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_urgenAdd">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>40</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>添加</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_urgenDel">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>删除</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_urgenName">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>161</width>
+       <height>461</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_urgenScore">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>100</y>
+       <width>81</width>
+       <height>461</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -980,12 +1036,195 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBox_pressure">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>420</y>
+      <width>381</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>普通关卡抗压分(不与前面重复计算)：</string>
+    </property>
+    <widget class="QLabel" name="label_pressureScore">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>-9</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3boss">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>三层普通BOSS：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_3boss">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_4level">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>80</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4level">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>四层作战：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5level">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>五层非BOSS：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6level">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>额外层非BOSS：</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_5level">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>130</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_6level">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>180</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3bossScore">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>31</y>
+       <width>54</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4levelScore">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>80</y>
+       <width>54</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5levelScore">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>130</y>
+       <width>54</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6levelScore">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>180</y>
+       <width>54</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </widget>
    <zorder>groupBox_tmp</zorder>
    <zorder>groupBox_result</zorder>
    <zorder>groupBox_animal</zorder>
    <zorder>groupBox_urgency</zorder>
    <zorder>groupBox_prop</zorder>
    <zorder>groupBox_store</zorder>
+   <zorder>groupBox_pressure</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1442,6 +1681,86 @@
     <hint type="sourcelabel">
      <x>905</x>
      <y>441</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_extraWithdraw</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>945</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_3boss</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>491</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_4level</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>541</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_5level</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_6level</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>641</y>
     </hint>
     <hint type="destinationlabel">
      <x>629</x>

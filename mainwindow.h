@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QList>
+#include <QPair>
+#include "urgenui.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,16 +19,18 @@ public:
     ~MainWindow();
 
 protected:
-    int tmpAllScore, tmp6, tmp5, tmp4;
+    int tmpScore, resScore, animalScore, urgencyScore, propScore, storeScore, pressureScore;
+
+    int tmp6, tmp5, tmp4;
 
     int res[8];
-    int resScore;
 
-    int animalNum, animalScore;
+    int animalNum;
 
-    int clctionNum, boardNum, propScore;
+    QList<QPair<QString, int>> *urgency;
+    int urgencyCount;
 
-    int storeScore, extraWithdraw;
+    int clctionNum, boardNum;
 
 private slots:
     void update();
@@ -54,7 +59,9 @@ private slots:
 
     void on_spinBox_board_valueChanged(int arg1);
 
-    void on_spinBox_extraWithdraw_valueChanged(int arg1);
+    void on_pushButton_urgenDel_clicked();
+
+    void on_pushButton_urgenAdd_clicked();
 
 private:
     Ui::MainWindow *ui;
