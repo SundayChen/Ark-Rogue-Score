@@ -1400,6 +1400,9 @@
       <height>51</height>
      </rect>
     </property>
+    <property name="minimum">
+     <number>-4000</number>
+    </property>
     <property name="maximum">
      <number>4000</number>
     </property>
